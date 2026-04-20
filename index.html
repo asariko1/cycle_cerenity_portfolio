@@ -1,45 +1,162 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="en" class="scroll-smooth scroll-pt-28">
 <head>
-
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cycle Serenity | asariko</title>
+  <meta name="description" content="Cycle Serenity is a calm, privacy-first cycle tracking app designed for clarity, comfort, and simplicity." />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <title>Cycle Serenity</title>
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-  <meta name="description" content="Cycle Serenity is a minimal, privacy-first cycle tracking app designed for clarity and calm." />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            slate: {
+              850: '#1f2937',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
+  <style>
+    h1.text-slate-900,
+    h2.text-slate-900 {
+      color: #2c3e50 !important;
+    }
+
+    header a.text-slate-900 {
+      color: #2c3e50 !important;
+    }
+  </style>
 </head>
 
-<body style="font-family: Arial, sans-serif; text-align: center; padding: 40px;">
+<body class="bg-white text-slate-900 selection:bg-slate-200 selection:text-slate-900 font-sans">
 
-  <h1>Cycle Serenity</h1>
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 py-6">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
+      <a href="/" class="text-xl font-bold tracking-tight text-slate-900 z-50 relative">asariko</a>
 
-  <p>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Home</a>
+        <a href="/terms" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Terms</a>
+        <a href="/privacy" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Privacy</a>
+      </nav>
 
-    A minimal, privacy-first cycle tracking app designed for clarity and calm.
+      <button id="mobile-menu-btn" class="md:hidden text-slate-900 p-2 z-50 relative" aria-label="Toggle menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
 
-  </p>
+    <div id="mobile-menu" class="fixed top-0 left-0 w-screen h-screen bg-white/70 backdrop-blur-sm z-40 flex-col items-center justify-center gap-8 hidden opacity-0 transition-opacity duration-300">
+      <a href="/" class="mobile-link text-2xl font-medium text-slate-900">Home</a>
+      <a href="/terms" class="mobile-link text-2xl font-medium text-slate-900">Terms</a>
+      <a href="/privacy" class="mobile-link text-2xl font-medium text-slate-900">Privacy</a>
+    </div>
+  </header>
 
-  <p>
+  <main class="pt-28 flex-grow w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col gap-24 md:gap-32 pb-24">
 
-    Built with simplicity, no data collection, and full control on your device.
+    <section class="scroll-mt-24">
+      <article class="flex flex-col gap-12">
 
-  </p>
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Cycle Serenity</h1>
+          <p class="text-xl text-slate-400 font-light mb-6">
+            Track your cycle with calm, clear insights and predictions.
+          </p>
+          <p class="text-slate-600 leading-relaxed text-lg mb-8">
+            Cycle Serenity is a calm and private cycle tracking app designed to help you understand your rhythm, log symptoms, and view predictions with clarity. Built with simplicity in mind, it keeps the experience focused, gentle, and easy to use.
+          </p>
 
-  <br/>
+          <div class="flex flex-wrap items-center gap-4">
+            <a
+              href="/terms"
+              class="inline-flex items-center gap-2 bg-[#2c3e50] text-white px-6 py-3.5 rounded-lg text-sm font-medium transition-transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-slate-900/20">
+              Terms
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+            </a>
 
-  <footer style="margin-top: 60px;">
+            <a
+              href="/privacy"
+              class="inline-flex items-center gap-2 border border-slate-200 text-slate-700 px-6 py-3.5 rounded-lg text-sm font-medium hover:bg-slate-50 hover:border-slate-300 transition-all">
+              Privacy
+              <i data-lucide="shield" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
 
-    <a href="/terms">Terms</a> |
+        <!-- Image Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="aspect-[3/4] rounded-lg overflow-hidden bg-slate-50 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.04] hover:shadow-md">
+            <img src="/assets/cycle_serenity/c1.webp" class="w-full h-full object-contain bg-slate-50 transition-transform duration-500" alt="Cycle Serenity screen 1">
+          </div>
 
-    <a href="/privacy">Privacy</a>
+          <div class="aspect-[3/4] rounded-lg overflow-hidden bg-slate-50 transition-transform duration-300 hover:-translate-y-1 hover:scale-[1.04] hover:shadow-md">
+            <img src="/assets/cycle_serenity/c2.webp" class="w-full h-full object-contain bg-slate-50 transition-transform duration-500" alt="Cycle Serenity screen 2">
+          </div>
+        </div>
 
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="py-8 text-slate-400 text-sm border-t border-slate-100 mt-12">
+    <div class="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:items-center sm:text-left max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <span>&copy; <span id="year"></span> asariko</span>
+
+      <div class="flex flex-col items-center gap-2 sm:flex-row sm:gap-4 sm:justify-end">
+        <span>Built with simplicity</span>
+
+        <div class="flex items-center gap-2">
+          <a href="/terms" class="hover:text-slate-900 transition-colors">Terms</a>
+          <span class="text-slate-300">·</span>
+          <a href="/privacy" class="hover:text-slate-900 transition-colors">Privacy</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-</body>
+  <script>
+    lucide.createIcons();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("flex");
+      setTimeout(() => {
+        mobileMenu.classList.toggle("opacity-0");
+      }, 10);
+    });
+
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("opacity-0");
+        setTimeout(() => {
+          mobileMenu.classList.add("hidden");
+          mobileMenu.classList.remove("flex");
+        }, 300);
+      });
+    });
+  </script>
+</body>
 </html>
