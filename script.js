@@ -3,27 +3,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("mobile-menu-btn");
   const menu = document.getElementById("mobile-menu");
 
+  const openMenu = () => {
+    if (!menu) return;
+    menu.classList.remove("hidden");
+    requestAnimationFrame(() => {
+      menu.classList.remove("opacity-0");
+    });
+    document.body.style.overflow = "hidden";
+  };
+
   const closeMenu = () => {
     if (!menu) return;
-    menu.classList.add("hidden");
-    menu.classList.remove("flex");
     menu.classList.add("opacity-0");
-    menu.classList.remove("opacity-100");
-    document.body.style.overflow = "";
+    setTimeout(() => {
+      menu.classList.add("hidden");
+      document.body.style.overflow = "";
+    }, 300);
   };
 
   if (btn && menu) {
     btn.addEventListener("click", () => {
       const isHidden = menu.classList.contains("hidden");
       if (isHidden) {
-        menu.classList.remove("hidden");
-        menu.classList.add("flex");
-        menu.scrollTop = 0;
-        requestAnimationFrame(() => {
-          menu.classList.remove("opacity-0");
-          menu.classList.add("opacity-100");
-        });
-        document.body.style.overflow = "hidden";
+        openMenu();
       } else {
         closeMenu();
       }
