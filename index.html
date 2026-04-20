@@ -48,27 +48,32 @@
 <body class="bg-white text-slate-900 selection:bg-slate-200 selection:text-slate-900 font-sans">
 
   <!-- Navbar -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 py-6">
-    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
-      <a href="/" class="text-xl font-bold tracking-tight text-slate-900 z-50 relative">asariko</a>
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-300 py-6">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
+            <a href="#home" class="text-xl font-bold tracking-tight text-slate-900 z-50 relative">asariko</a>
 
-      <nav class="hidden md:flex items-center gap-8">
-        <a href="/" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Home</a>
-        <a href="/terms" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Terms</a>
-        <a href="/privacy" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Privacy</a>
-      </nav>
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Home</a>
+                <a href="/projects" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Projects</a>
+                <a href="#about" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">About</a>
+                <a href="#contact" class="text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors">Contact</a>
+            </nav>
 
-      <button id="mobile-menu-btn" class="md:hidden text-slate-900 p-2 z-50 relative" aria-label="Toggle menu">
-        <i data-lucide="menu" class="w-6 h-6"></i>
-      </button>
-    </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-900 p-2 z-50 relative" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
 
-    <div id="mobile-menu" class="fixed top-0 left-0 w-screen h-screen bg-white/70 backdrop-blur-sm z-40 flex-col items-center justify-center gap-8 hidden opacity-0 transition-opacity duration-300">
-      <a href="/" class="mobile-link text-2xl font-medium text-slate-900">Home</a>
-      <a href="/terms" class="mobile-link text-2xl font-medium text-slate-900">Terms</a>
-      <a href="/privacy" class="mobile-link text-2xl font-medium text-slate-900">Privacy</a>
-    </div>
-  </header>
+        <!-- Mobile Nav Overlay -->
+        <div id="mobile-menu" class="fixed top-0 left-0 w-screen h-screen bg-white/70 backdrop-blur-sm z-40 flex-col items-center justify-center gap-8 hidden opacity-0 transition-opacity duration-300">
+            <a href="#home" class="mobile-link text-2xl font-medium text-slate-900">Home</a>
+            <a href="/projects" class="mobile-link text-2xl font-medium text-slate-900">Projects</a>
+            <a href="#about" class="mobile-link text-2xl font-medium text-slate-900">About</a>
+            <a href="#contact" class="mobile-link text-2xl font-medium text-slate-900">Contact</a>
+        </div>
+    </header>
 
   <main class="pt-28 flex-grow w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col gap-24 md:gap-32 pb-24">
 
