@@ -145,26 +145,7 @@
     lucide.createIcons();
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    mobileMenuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
     
-      setTimeout(() => {
-        mobileMenu.classList.toggle("opacity-0");
-      }, 10);
-    });
-
-    document.querySelectorAll(".mobile-link").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("opacity-0");
-        setTimeout(() => {
-          mobileMenu.classList.add("hidden");
-          
-        }, 300);
-      });
-    });
   </script>
   <script src="/script.js"></script>
 <script>
